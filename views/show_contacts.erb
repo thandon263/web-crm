@@ -1,0 +1,15 @@
+<h4><%= @contact.first_name %> <%= @contact.last_name %></h4>
+<p><strong>Email:</strong><%= @contact.email %></p>
+<p><strong>Note:</strong><%= @contact.note %></p>
+
+<form action='/contacts/<%= @contact.id%>/edit' method='post'>
+  <input type='hidden' name='_method' value='put'>
+  <input type='submit' value='Edit Contact'>
+</form>
+
+<form action='/contacts/<%= @contact.id %>' method='post'>
+  <input type='hidden' name='_method' value='delete'>
+  <input type='submit' value='Delete Contact'>
+</form>
+
+<li><a href="/">Main Menu</a></li>
